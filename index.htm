@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160682698-1"></script>
@@ -12,8 +12,9 @@
 </script>
 
 	<meta charset="utf-8">
-	<title>Cezario Site - Portfolio</title>
+	<title>Cezario Official Site</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<meta http-equiv="refresh" content="10">-->
 	
 	<link href="https://fonts.googleapis.com/css?family=Akronim|Black+Ops+One|Cinzel+Decorative:400,700,900|Federant|Flamenco:300,400|Gugi|Kaushan+Script|Lemonada:300,400,500,600,700|Monoton|Oxanium:200,300,400,500,600,700,800|Sirin+Stencil&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="fontello/css/fontello.css">
@@ -146,6 +147,7 @@ Nowy Sącz ul. Barbackiego 91">
 						<div class="skills">	
 							<img src="img/html5.png">
 							<img src="img/css3.png">
+							<!--<img src="img/javascript5.png">-->
 							<img src="img/JavaScript.png">
 							<img src="img/php7.png">
 							<img src="img/sql.png">
@@ -153,9 +155,12 @@ Nowy Sącz ul. Barbackiego 91">
 						<div class="skills">
 							<img src="img/naprawa.png" title="montaż i naprawa komputerów">
 							<img src="img/wifi.png" title="instalacja i konfiguracja sieci">
+							<!--<img src="img/montaż.png">-->
 							<img src="img/windows.jpg">
 							<img src="img/android.png">
 							<img src="img/baltie.png">
+							<!--<img src="img/jezyki.png">-->
+							<!--Strona w całości napisana w Notpad++-->
 						</div>
 					</ul>
 				</li>
@@ -167,10 +172,10 @@ Nowy Sącz ul. Barbackiego 91">
 								<i class="icon-mail"></i><br>
 								cezario@int.pl
 							</div>
-							<a href="https://github.com/c3zario" target="_blank"><div class="mail">
+							<div class="mail">
 								<i class="icon-github"></i><br>
-								Github <span id="c3zarioall">c<span id="c3zario3">3</span>zario</span>
-							</div></a>
+								Github cezario
+							</div>
 							<div style="clear: both;"></div>
 						</div>
 					</ul>
@@ -191,14 +196,14 @@ Nowy Sącz ul. Barbackiego 91">
 							<a href="https://pizzatechnology.tk/" target="_blank"><li><span class="li">Pizza Technology</span></li></a>
 						</ul>
 					</li>
-					<!--<div style="clear: both;"></div>
+					<div style="clear: both;"></div>
 					<li id="li5" class="li2">
 						<ul>
 							<h1>Różne projekty</h1>
 						
 							<a href="PHP/edycjapliku/tekst.php" target="_blank"><li><span class="li">PHP / edycja pliku</span></li></a>
 						</ul>
-					</li>-->
+					</li>
 				</ul>
 		</article>
 	</main>
@@ -211,6 +216,10 @@ Nowy Sącz ul. Barbackiego 91">
 		
 		function klik( e )
 		{
+			/*document.getElementsByTagName('ul')[2].setAttribute("class", "block");*/
+			
+			
+			
 			var id = this.getAttribute("id").substr(1,2);
 			var i = document.getElementsByTagName('ul')[id].getAttribute("class");
 			
@@ -236,7 +245,15 @@ Nowy Sącz ul. Barbackiego 91">
 			document.getElementsByTagName('nav')[0].setAttribute("class", "noneblock");
 			document.getElementById('butmenu').setAttribute("class", "menu headerrunback butmenuhoverback");
 			}
+			//document.getElementById('butmenu').setAttribute("onclick", "noneblock()");
 		}
+		
+		/*function noneblock()
+		{
+			document.getElementsByTagName('nav')[0].setAttribute("class", "noneblock");
+			//document.getElementById('butmenu').setAttribute("onclick", "block()");
+		}*/
+	
 	</script>
 </body>
 </html>
