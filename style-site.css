@@ -697,3 +697,8 @@
 	{
 		background-image: url(img/cezario.png);
 	}
+
+	::selection
+	{
+		color: inherit;
+	}
