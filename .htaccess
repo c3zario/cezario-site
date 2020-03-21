@@ -5,4 +5,4 @@ Deny from all
 </FilesMatch>
 
 RewriteEngine on
-RewriteRule cookies php/cookies.php
+RewriteRule cookies php/cookies.htm
