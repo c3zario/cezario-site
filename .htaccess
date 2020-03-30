@@ -6,3 +6,4 @@ Deny from all
 
 RewriteEngine on
 RewriteRule cookies cookies.htm
+RewriteRule domek domek.htm

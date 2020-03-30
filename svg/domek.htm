@@ -1,0 +1,122 @@
+<style>
+	*
+	{
+		stroke: black;
+		stroke-width: 12.5;
+	}
+	
+	rect
+	{
+		fill: #e3942f;
+	}
+	
+	polygon
+	{
+		fill: #df0817;
+		stroke-linejoin: round;
+	}
+	
+	path
+	{
+		fill: #634449;
+	}
+	
+	#drzwi
+	{
+		fill: #61332c;
+		stroke-linejoin: round;
+	}
+	
+	#okno
+	{
+		fill: #66474c;
+		stroke-linejoin: round;
+	}
+	
+	circle
+	{
+		fill: none;
+	}
+	
+	#a
+	{
+		width="240"; height="220";
+	}
+	
+	@keyframes dom
+	{
+		to
+		{
+			
+		}
+	}
+	
+	.a, .b, .c, .d, .e, .f, .g
+	{
+		animation-name: dom;
+		animation-fill-mode: both;
+	}
+	
+	.a
+	{
+		animation-duration: 2s;
+	}
+	
+	.b
+	{
+		animation-duration: 3s;
+	}
+	
+	.c
+	{
+		animation-duration: 4s;
+	}
+	
+	.d
+	{
+		animation-duration: 5s;
+	}
+	
+	.e
+	{
+		animation-duration: 6s;
+	}
+	
+	.f
+	{
+		animation-duration: 7s;
+	}
+	
+	.g
+	{
+		animation-duration: 8s;
+	}
+	
+	@keyframes dom
+	{
+		to
+		{
+			transform: rotate(360deg);
+		}
+	}
+</style>
+<svg width="auto" height="auto">
+	<rect class="a" x="800" y="500" width="240" height="220"/>
+	<rect class="b" id="drzwi" x="920" y="620" width="60" height="100"/>
+	<rect class="c" id="okno" x="830" y="590" width="55" height="55"/>
+	<path class="d" d="M1020,500 v-81,0 h-60,0"></path>
+	<polygon class="e" points="785,500 920,385 1055,500"></polygon>
+	<circle class="f" cx="990" cy="389" r="13.5"></circle>
+	<circle class="g" cx="1025" cy="360" r="20"></circle>
+	
+</svg>
+
+<!--<svg width="500" height="500">
+	<rect x="100" y="200" width="240" height="220"/>
+	<rect id="drzwi" x="220" y="320" width="60" height="100"/>
+	<rect id="okno" x="130" y="290" width="55" height="55"/>
+	<path d="M320,200 v-81,0 h-60,0"></path>
+	<polygon points="85,200 220,85 355,200"></polygon>
+	<circle cx="290" cy="89" r="13.5"></circle>
+	<circle cx="325" cy="60" r="20"></circle>
+</svg>
