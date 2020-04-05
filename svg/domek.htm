@@ -5,6 +5,11 @@
 		stroke-width: 12.5;
 	}
 	
+	body
+	{
+		margin: 0;
+	}
+	
 	rect
 	{
 		fill: #e3942f;
@@ -99,18 +104,99 @@
 			transform: rotate(360deg);
 		}
 	}
+	
+	.rot
+	{
+		animation-name: rot;
+		animation-fill-mode: both;
+		animation-duration: 26s;
+	}
+	
+	.rot2
+	{
+		animation-name: rot;
+		animation-fill-mode: both;
+		animation-duration: 28s;
+		animation-delay: 0.5s;
+	}
+	
+	@keyframes rot
+	{
+		to
+		{
+			transform: rotate(-30deg);
+		}
+	}
 </style>
 <svg width="100%" height="100%">
-	<rect class="a" x="400" y="600" width="240" height="220"/>
-	<rect class="b" id="drzwi" x="520" y="720" width="60" height="100"/>
-	<rect class="c" id="okno" x="430" y="690" width="55" height="55"/>
-	<path class="d" d="M620,600 v-81,0 h-60,0"></path>
-	<polygon class="e" points="385,600 520,485 655,600"></polygon>
-	<circle class="f" cx="590" cy="489" r="13.5"></circle>
-	<circle class="g" cx="625" cy="460" r="20"></circle>
+	<rect class="a" x="800" y="500" width="240" height="220"/>
+	<rect class="b" id="drzwi" x="920" y="620" width="60" height="100"/>
+	<rect class="c" id="okno" x="830" y="590" width="55" height="55"/>
+	<path class="d" d="M1020,500 v-81,0 h-60,0"></path>
+	<polygon class="e" points="785,500 920,385 1055,500"></polygon>
+	<circle class="f" cx="990" cy="389" r="13.15">
+	</circle><circle class="g" cx="1025" cy="360" r="20"></circle>
 	
 </svg>
+<script>
+	function dym()
+	{
+		/*var dym = document.createElement("circle");
+		document.body.appendChild(dym);
+		
+		var dym = document.createTextNode('<circle class="f" cx="990" cy="389" r="13.5"></circle>');
+		document.body.appendChild(dym);*/
+		
+		var dymm = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+		dymm.setAttribute("class", "f rot2");
+		dymm.setAttribute("cx", 990);
+		dymm.setAttribute("cy", 389);
+		dymm.setAttribute("r", 13.15);
+		
+		
+		document.getElementsByTagName("svg")[0].appendChild(dymm);
+	}
+	
+	function dym2()
+	{
+		/*var dym = document.createElement("circle");
+		document.body.appendChild(dym);
+		
+		var dym = document.createTextNode('<circle class="f" cx="990" cy="389" r="13.5"></circle>');
+		document.body.appendChild(dym);*/
+		
+		var dymd = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+		dymd.setAttribute("class", "g rot");
+		dymd.setAttribute("cx", 1025);
+		dymd.setAttribute("cy", 360);
+		dymd.setAttribute("r", 20);
+		
+		
+		document.getElementsByTagName("svg")[0].appendChild(dymd);
+	}
+	
+	setTimeout(function(){
+		document.getElementsByTagName("circle")[0].remove();
+		document.getElementsByTagName("circle")[0].remove();
+		
+		dym()
+		dym2()
+		
+		const dymek = function()
+		{
+			dym()
+		}
+		
+		const dymek2 = function()
+		{
+			dym2()
+		}
 
+		Math.floor(Math.random() * 2001);
+		setInterval(dymek, 3017);
+		setInterval(dymek2, 4953);
+	},8000);
+</script>
 <!--<svg width="500" height="500">
 	<rect x="100" y="200" width="240" height="220"/>
 	<rect id="drzwi" x="220" y="320" width="60" height="100"/>
@@ -119,4 +205,4 @@
 	<polygon points="85,200 220,85 355,200"></polygon>
 	<circle cx="290" cy="89" r="13.5"></circle>
 	<circle cx="325" cy="60" r="20"></circle>
-</svg>
+</svg>-->
