@@ -5,33 +5,43 @@
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
 
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+var t = 250;
+
+const draw = function() {
+setTimeout(function(){
+ctx.clearRect(0, 0, 1900, 800);
+}, 0);
+setTimeout(function(){
 
 	ctx.beginPath();
 	ctx.rect(555, 120, 35, 70);
 	ctx.lineWidth = 5;
 	ctx.stroke();
 	ctx.closePath();
-	
+}, t);
+setTimeout(function(){
 	ctx.beginPath();
 	ctx.rect(200, 285, 495, 365);
 	ctx.lineWidth = 5;
 	ctx.stroke();
 	ctx.closePath();
-
+}, 2*t);
+setTimeout(function(){
 	ctx.beginPath();
 	ctx.rect(215, 292, 465, 348);
 	ctx.lineWidth = 5;
 	ctx.stroke();
 	ctx.closePath();
-
+}, 3*t);
+setTimeout(function(){
 	ctx.beginPath();
 	ctx.rect(220, 275, 455, 345);
 	ctx.lineWidth = 5;
 	ctx.fillStyle = "white";
 	ctx.fill();
 	ctx.closePath();
-
+}, 4*t);
+setTimeout(function(){	
 
 //drzwi
 	ctx.beginPath();
@@ -39,14 +49,16 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.lineWidth = 5;
 	ctx.stroke();
 	ctx.closePath();
-
+}, 5*t);
+setTimeout(function(){	
 	ctx.beginPath();
 	ctx.rect(397.5, 380, 100, 205);
 	ctx.lineWidth = 5;
 	ctx.stroke();
 	ctx.closePath();
 //
-
+}, 6*t);
+setTimeout(function(){
 //lewe okno
 	ctx.beginPath();
 
@@ -58,8 +70,9 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.lineTo(230, 515);
 
 	ctx.closePath();
-	
-
+	ctx.stroke();
+}, 7*t);
+setTimeout(function(){
 		ctx.lineJoin = "round";
 		ctx.moveTo(245, 380);
 
@@ -68,7 +81,9 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.lineTo(245, 432.5);
 
 		ctx.closePath();
-
+		ctx.stroke();
+}, 8*t);
+setTimeout(function(){
 		ctx.moveTo(245, 447.5);
 
 		ctx.lineTo(291.25, 447.5);
@@ -76,6 +91,9 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.lineTo(245, 500);
 
 		ctx.closePath();
+		ctx.stroke();
+}, 9*t);
+setTimeout(function(){
 
 
 		ctx.moveTo(306.5, 380);
@@ -85,6 +103,9 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.lineTo(306.5, 432.5);
 
 		ctx.closePath();
+		ctx.stroke();
+}, 10*t);
+setTimeout(function(){
 
 		ctx.moveTo(306.5, 447.5);
 
@@ -93,6 +114,9 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.lineTo(306.5, 500);
 
 		ctx.closePath();
+		ctx.stroke();
+}, 11*t);
+setTimeout(function(){
 //
 
 //prawe okno
@@ -105,6 +129,9 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.lineTo(528.75, 515);
 
 	ctx.closePath();
+	ctx.stroke();
+}, 12*t);
+setTimeout(function(){
 	
 		ctx.lineJoin = "round";
 		ctx.moveTo(543.75, 380);
@@ -114,6 +141,9 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.lineTo(543.75, 432.5);
 
 		ctx.closePath();
+		ctx.stroke();
+}, 13*t);
+setTimeout(function(){
 
 		ctx.moveTo(543.75, 447.5);
 
@@ -122,6 +152,9 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.lineTo(543.75, 500);
 
 		ctx.closePath();
+		ctx.stroke();
+}, 14*t);
+setTimeout(function(){
 
 
 		ctx.moveTo(605.25, 380);
@@ -131,6 +164,9 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.lineTo(605.25, 432.5);
 
 		ctx.closePath();
+		ctx.stroke();
+}, 15*t);
+setTimeout(function(){
 
 		ctx.moveTo(605.25, 447.5);
 
@@ -139,18 +175,26 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.lineTo(605.25, 500);
 
 		ctx.closePath();
+		ctx.stroke();
+}, 16*t);
+setTimeout(function(){
 //
 
 
-ctx.moveTo(365, 660);
-ctx.lineTo(340, 800);
+	ctx.moveTo(365, 660);
+	ctx.lineTo(340, 800);
+	ctx.stroke();
+	ctx.closePath();
 ctx.stroke();
-ctx.closePath();
-
-ctx.moveTo(530, 660);
-ctx.lineTo(555, 800);
-ctx.stroke();
-ctx.closePath();
+}, 17*t);
+setTimeout(function(){
+	ctx.moveTo(530, 660);
+	ctx.lineTo(555, 800);
+	ctx.stroke();
+	ctx.closePath();
+	ctx.stroke();
+}, 18*t);
+setTimeout(function(){
 
 
 ctx.beginPath();
@@ -167,22 +211,31 @@ ctx.lineTo(135, 325);
 ctx.closePath();
 ctx.fillStyle = "white";
 ctx.fill();
+ctx.closePath();
 ctx.stroke();
-
-
+}, 19*t);
+setTimeout(function(){
 
 
 //3 schód
 	ctx.beginPath();
 	ctx.rect(377.5, 585, 140, 20);
 	ctx.lineWidth = 5;
-	ctx.stroke();
+
+ctx.stroke();
+ctx.closePath();
+}, 20*t);
+setTimeout(function(){
 	
 //2 schód
 	ctx.beginPath();
 	ctx.rect(362.5, 605, 170, 25);
 	ctx.lineWidth = 5;
-	ctx.stroke();
+
+ctx.stroke();
+ctx.closePath();
+}, 21*t);
+setTimeout(function(){
 
 //1 schód
 	ctx.beginPath();
@@ -193,8 +246,14 @@ ctx.stroke();
 	ctx.beginPath();
 	ctx.fillStyle = "white";
 	ctx.fillRect(347.5, 630, 200, 30);
-	
 
+ctx.stroke();
+ctx.closePath();
+}, 22*t);
+}
+
+
+setInterval(draw, 5600);
 
 /*ctx.beginPath();
 ctx.rect(407.5, 385, 80, 200);
