@@ -8,3 +8,4 @@ RewriteEngine on
 RewriteRule cookies cookies.htm
 RewriteRule domek domek.htm
 RewriteRule czas czas.htm
+RewriteRule baza-danych baza-danych.htm
