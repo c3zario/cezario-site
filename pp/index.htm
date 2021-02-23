@@ -1,0 +1,23 @@
+<input id="a"> dochód
+<br>
+<input id="b"> numer w dzienniku
+
+<button id="c">sprawdź</button>
+<div id="d"></div>
+
+<script>
+    function ab(a,b) {
+        c = ( parseInt(a) + parseInt(b)*100 );
+
+        document.getElementById('d').innerHTML = 
+        ( (0.17 * c - (1360 - 834.88 * (c - 8000) / 5000)) );
+        console.log(a);
+        console.log(b);
+    }
+
+    document.getElementById('c').onclick = function () {
+        x = document.getElementById('a').value;
+        y = document.getElementById('b').value;
+        ab(x,y);
+    }
+</script>
