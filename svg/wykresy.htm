@@ -1,0 +1,49 @@
+<svg width="800" height="800" style="background-color: lightgrey; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 1px solid black">
+    <g></g>
+</svg>
+
+<script>
+
+//Creating variables
+const svge = document.querySelector("svg");
+const ge = document.querySelector("g");
+//const ctx = canvas.getContext("2d");
+cw = svge.getAttribute('width'), ch = svge.getAttribute('height');
+margin = 20;
+            
+//Creating table
+table = []
+for(let i = 0; i <= 10; i++) {
+    table.push(Math.floor(Math.random()*201-100));
+} 
+
+//Setting min value
+min = Math.min(...table);
+if(min > 0) min = 0;
+
+//Setting max value
+max = Math.max(...table);
+if(max < 0) max = 0;
+
+//Making OX
+k = cw / (max - min);
+ox = cw*0.5 + (cw*0.5 - max * k);
+document.getElementsByTagName("g")[0].setAttribute('transform', 'translate(0,'+ox+')')
+
+//Making width
+width = (cw - margin * (table.length + 1)) / table.length;
+
+//Making loop
+for(let i in table) {
+
+    //Creating next variables
+    let x = -25 + ( width + margin ) * i +  margin + width / 2, y = table[i] * k;
+    //Creating lines
+    randomColor = 'hsl(' + (Math.PI * 50 * i) + ', 100%, 50%)';
+    
+    rotate = y < 0 ? 'transform: rotate(180deg); transform-origin: 50% 0%; transform-box: fill-box;' : ''; //ujemne odwracamy
+
+    ge.insertAdjacentHTML("beforeend", `<rect x='${x}' y='${0}' width='${width}' height='${Math.abs(y)}' style="fill:${randomColor}; stroke-width: 2; stroke: black; ${rotate}" />`);
+}
+
+</script>
