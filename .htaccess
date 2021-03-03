@@ -11,4 +11,5 @@ RewriteRule chart wykresy.htm
 RewriteRule czas czas.htm
 RewriteRule baza-danych baza-danych.htm
 RewriteRule u4 u4.htm
+RewriteRule u5 u5.htm
 RewriteRule pp pp.htm
