@@ -1,273 +1,38 @@
-<body>
-    
-</body>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160682698-1"></script>
 <script>
-ang = [
-'be made up of',
-'breadth',
-'broad',
-'broaden',
-'calm sea',
-'come across',
-'come in',
-'dangerous current',
-'deep',
-'deepen',
-'depth',
-'desert/remote island',
-'die out',
-'fast-flowing/slow-moving river',
-'flow',
-'giant/huge wave',
-'go out',
-'heat up',
-'heavy/rough sea',
-'height',
-'heighten',
-'high/rising tide',
-'length',
-'lengthen',
-'long',
-'low tide',
-'mountain peak',
-'mountain range',
-'mountain ridge',
-'ocean current',
-'river bank',
-'seabed',
-'stir up',
-'strength',
-'strengthen',
-'strong',
-'strong current',
-'tidal wave',
-'tropical island',
-'volcanic eruption',
-'whale',
-'wide',
-'widen',
-'width',
-'winding river',
-'capital city',
-'continent',
-'country',
-'economic growth',
-'expand',
-'inhabitant',
-'innovation',
-'locate',
-'megacity',
-'population',
-'poverty',
-'predict',
-'production',
-'provide',
-'vertical',
-'affect',
-'air quality',
-'bicycle rack',
-'climate',
-'climate change',
-'electricity',
-'environment',
-'environmental issues',
-'gadget',
-'global warming',
-'in the school grounds',
-'low-energy light bulb',
-'organic',
-'recycle',
-'recycling bin',
-'renewable energy',
-'save electricity',
-'solar panels',
-'backpack',
-'bear',
-'bear encounter',
-'bee',
-'branch',
-'clearing',
-'come face to face with',
-'cub',
-'defend',
-'die from',
-'flashlight',
-'fox',
-'go off',
-'gorge yourself',
-'hedgehog',
-'in the bushes',
-'insect repellent',
-'leaf / leaves',
-'nail clippers',
-'pancake',
-'path',
-'pepper spray',
-'pitch black',
-'pond',
-'predator',
-'prey',
-'reach for',
-'root',
-'search through',
-'sharp knife',
-'sit around',
-'skunk',
-'sleep through',
-'sleeping bag',
-'snore',
-'spring',
-'squirrel',
-'store food',
-'sunscreen',
-'trail',
-'trunk',
-'bite',
-'cage',
-'coast',
-'dolphin',
-'female elephant/gorilla/bear',
-'herd'
-];
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-pol = [
-'składać się z',
-'szerokość',
-'szeroki',
-'poszerzać',
-'spokojne morze',
-'natknąć się na',
-'docierać, pojawić się (o przypływie)',
-'niebezpieczny prąd (morski)',
-'głęboki',
-'pogłębiać',
-'głębokość',
-'bezludna/odległa wyspa',
-'wyginąć',
-'wartko/wolno płynąca rzeka',
-'płynąć',
-'gigantyczna/olbrzymia fala',
-'ustępować (o przypływie)',
-'podgrzać',
-'wzburzone morze',
-'wysokość',
-'podwyższać',
-'przypływ',
-'długość',
-'wydłużać',
-'długi',
-'odpływ',
-'wierzchołek góry',
-'pasmo górskie',
-'grzbiet górski',
-'prąd morski',
-'brzeg rzeki',
-'dno morskie',
-'wzburzyć, poruszyć',
-'siła',
-'wzmacniać',
-'silny',
-'silny prąd (morski)',
-'fala przypływu',
-'wyspa tropikalna',
-'wybuch wulkanu',
-'wieloryb',
-'szeroki',
-'poszerzać',
-'szerokość',
-'kręta rzeka',
-'stolica',
-'kontynent',
-'kraj',
-'wzrost gospodarczy',
-'powiększyć, rozbudować',
-'mieszkaniec',
-'innowacja',
-'usytuować',
-'megamiasto',
-'liczba ludności',
-'ubóstwo',
-'przepowiadać, przewidywać',
-'produkcja',
-'dostarczać',
-'pionowy',
-'dotyczyć, dotykać',
-'jakość powietrza',
-'stojak na rowery',
-'klimat',
-'zmiana klimatu',
-'elektryczność',
-'środowisko naturalne',
-'zagadnienia związane ze środowiskiem',
-'gadżet',
-'globalne ocieplenie',
-'na terenie szkoły',
-'żarówka energooszczędna',
-'ekologiczny',
-'przetwarzać, ponownie wykorzystywać',
-'pojemnik segregacji odpadów',
-'energia odnawialna',
-'oszczędzać energię elektryczną',
-'panele słoneczne',
-'plecak',
-'niedźwiedź',
-'spotkanie z niedźwiedziem',
-'pszczoła',
-'gałąź',
-'polana',
-'stanąć twarzą w twarz',
-'młode (np. niedźwiedzia)',
-'bronić się',
-'umrzeć z powodu',
-'latarka',
-'lis',
-'zepsuć się (o jedzeniu)',
-'objadać się',
-'jeż',
-'w krzakach',
-'środek przeciw owadom',
-'liście',
-'obcinacz do paznokci',
-'naleśnik',
-'ścieżka',
-'gaz pieprzowy',
-'zupełnie ciemno',
-'staw',
-'drapieżnik',
-'ofiara',
-'sięgać po',
-'korzeń',
-'przetrząsać',
-'ostry nóż',
-'siedzieć bezczynnie',
-'skunks',
-'przespać coś',
-'śpiwór',
-'chrapać',
-'źródło',
-'wiewiórka',
-'przechowywać jedzenie',
-'przeciwsłoneczny',
-'szlak',
-'pień',
-'ugryźć',
-'klatka',
-'wybrzeże',
-'delfin',
-'niedźwiedzica',
-'stado'
-];
-
-var html = '\
-<input list="words">\
-<datalist id="words">';
-
-    for(var i=0;i<ang.length;i++) {
-        html += '<option value="'+ang[i]+' - '+pol[i]+'"></option>';
-    }
-console.log(html);
-
-html += '</datalist>';
-console.log(html);
-document.body.innerHTML = html;
+  gtag('config', 'UA-160682698-1');
 </script>
+
+	<meta charset="utf-8">
+	<meta name="description" content="Cezario Site - Portfolio. Znajdziesz tu strony internetowe i projekty stworzone przez: cezario (created by cezario)">
+	<meta name="keywords" content="cezario, c3zario, cezario tk, cezario portfolio, cezario site, nowy sącz, elektryk, zsem, sp7, siodemka, przewodniczący">
+	<meta name="author" content="cezario">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Cezario Site - Portfolio</title>
+	
+	<link rel="icon" href="../img/cezario.png">
+	<link rel="stylesheet" type="text/css" href="style-site.css">
+	<style>
+		body
+		{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		iframe
+		{
+			border: none;
+		}
+	</style>
+</head>
+
+    <iframe src="https://server470011.nazwa.pl/tip/ang/u5/" height="100%" width="100%"></iframe>
