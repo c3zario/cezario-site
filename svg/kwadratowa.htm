@@ -1,0 +1,133 @@
+<div id="start"></div>
+
+<script>
+    start();
+
+    function start() {
+        document.getElementById("start").innerHTML = `
+        <br><br><br>    
+        <l>wykres:</l> <input id="chartI" type="text" value="600" oninput="insertChart(0)"><br>
+            <l>a:</l> <input id="a" type="text" value="0" oninput="draw()"><br>
+            <l>b:</l> <input id="b" type="text" value="0" oninput="draw()"><br>
+            <l>c:</l> <input id="c" type="text" value="0" oninput="draw()"><br>
+            <br><br>
+            <div id="chart"></div>
+        `;
+
+        insertChart(600);
+    }
+
+
+    
+    function insertChart(wid) {
+        wid == 0 ? wid = document.getElementById("chartI").value :0;
+        wid%3 != 0 ? wid = parseInt(wid)+3-wid%3 :0;
+
+        dim = wid;
+        half = dim/2;
+        document.getElementById("chart").innerHTML = `
+            <style>
+                body {
+                    background-color: #333;
+                }
+
+                #start {
+                    text-align: center;
+                }
+                
+                input, l {
+                    height: 3vh;
+                    width: 17vh;
+                    font-size: 3vh;
+                    color: white;
+                }
+
+                input {
+                    border-color: white;
+                    background-color: #333;
+                    border-radius: 15px;
+                    text-align: right;
+                    padding-right: 10px;
+                    color: #5cffa2;
+                }
+
+                #chartI {
+                    width: 10vh;
+                    color: white;
+                }
+
+                line, text {
+                    animation: move 1s linear; 
+                    animation-fill-mode: forwards;
+                }
+
+                line {
+                    stroke-dasharray: ${wid}, ${wid};
+                    stroke-dashoffset: ${wid};
+                }
+
+                @keyframes move {
+                    100% {
+                        stroke-dashoffset: 0;
+                    }
+                }
+
+                text {
+                    fill: red;
+                }
+            </style>
+            <br>
+            <svg width="${wid}" height="${wid}" style="border:1px solid #d3d3d3;">
+                <line x1="0" y1="${half}" x2="${wid}" y2="${half}" style="stroke: black; stroke-width:6;"/>
+                <line x1="${half}" y1="0" x2="${half}" y2="${wid}" style="stroke: black; stroke-width:6;"/>
+            </svg>
+        `;
+
+        svg = document.querySelector("svg");
+
+        let line = "";
+        let pad = (wid%180)/2;
+        for(let i=-1; i < wid/30; i++) {
+            line += `<line x1="0" y1="${i*30+pad}" x2="${wid}" y2="${i*30+pad}" style="stroke: rgb(141, 140, 140); stroke-width:2;"/>`;
+            line += `<line x1="${i*30+pad}" y1="0" x2="${i*30+pad}" y2="${wid}" style="stroke: rgb(141, 140, 140); stroke-width:2;"/>`;
+
+            line += `<line x1="${i*30+pad}" y1="${half-10}" x2="${i*30+pad}" y2="${half+10}" style="stroke: black; stroke-width:2;"/>`;
+            line += `<line x1="${half-10}" y1="${i*30+pad}" x2="${half+10}" y2="${i*30+pad}" style="stroke: black; stroke-width:2;"/>`;
+        }
+
+        for(let i=0; i < wid/60; i++) {
+            line += `<text x="${i*30+(half)}" y="${half+20}">`+i+`</text>
+            <text x="${half+10}" y="${i*30+(half)+half/10}">-${i + 1}</text>`;
+
+            line += `<text x="${half-(i+1)*30}" y="${half+20}">-`+(i+1)+`</text>
+            <text x="${half+10}" y="${half-(i+1)*30}">`+(i+1)+`</text>`;
+        }
+
+
+        svg.insertAdjacentHTML("beforeend", line+"<>");
+        draw();
+    }
+
+
+
+    function draw()
+    {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let c = parseInt(document.getElementById("c").value);
+
+        let p = -b/2*a;
+        let q = -Math.pow(b, 2)/4*a + c;
+
+        let x1 = p-dim/10;
+        let x2 = p+dim/10;
+
+        let fx1 = Math.pow(x1, 2)*a + b*x1 + c;
+        let fx2 = Math.pow(x2, 2)*a + b*x2 + c;
+
+        let path = `<path d="M ${x1*30+half} ${half-fx1*30} q ${15*(x2 - x1)} ${60*(fx1 - q)} ${30*(x2 - x1)} ${30*(fx1 - fx2)}" stroke="#5cffa2" stroke-width="2" fill="none" />`;
+
+        svg.removeChild(svg.lastChild);
+        svg.insertAdjacentHTML("beforeend", path);
+    }
+</script>
