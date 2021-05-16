@@ -9,6 +9,7 @@ RewriteRule cookies cookies.htm
 RewriteRule domek domek.htm
 RewriteRule kwadratowa kwadratowa.htm
 RewriteRule chart wykresy.htm
+RewriteRule imie imie.htm
 RewriteRule czas czas.htm
 RewriteRule baza-danych baza-danych.htm
 RewriteRule u4 u4.htm
