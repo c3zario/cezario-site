@@ -16,3 +16,4 @@ RewriteRule u4 u4.htm
 RewriteRule u5 u5.htm
 RewriteRule u6 u6.htm
 RewriteRule pp pp.htm
+RewriteRule kasia kasia.htm
